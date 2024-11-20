@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_base/helpers/preferences.dart';
+import 'package:flutter_application_base/providers/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -18,8 +20,8 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             HeaderProfile(size: size),
-            const Padding(
-              padding: EdgeInsets.all(15.0),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
               child: BodyProfile(),
             ),
           ],
@@ -29,22 +31,35 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-class BodyProfile extends StatelessWidget {
-  final bool darkMode = false;
+/*class BodyProfile extends StatelessWidget {
+  bool darkMode = false;
 
-  const BodyProfile({
-    super.key,
-  });
+  BodyProfile({
+    Key? key,
+  }) : super(key: key); */
+
+class BodyProfile extends StatefulWidget {
+  const BodyProfile({Key? key}) : super(key: key);
 
   @override
+  State<BodyProfile> createState() => _BodyProfileState();
+} 
+
+class _BodyProfileState extends State<BodyProfile> {
+  @override
   Widget build(BuildContext context) {
+    final temaProvider = Provider.of<ThemeProvider>(context, listen: false);
+    print(Preferences.darkmode);
     return Column(
       children: [
         SwitchListTile.adaptive(
           title: const Text('Dark Mode'),
           value: Preferences.darkmode,
           onChanged: (bool value) {
-            Preferences.darkmode = value;
+            setState(() {
+              Preferences.darkmode = value; // Actualiza la preferencia.
+              value ? temaProvider.setDark() : temaProvider.setLight();
+            });
           },
         ),
         const SizedBox(
@@ -53,13 +68,14 @@ class BodyProfile extends StatelessWidget {
       ],
     );
   }
+  
 }
 
 class HeaderProfile extends StatelessWidget {
   const HeaderProfile({
-    super.key,
+   Key? key,
     required this.size,
-  });
+  }) : super(key: key);
 
   final Size size;
 
