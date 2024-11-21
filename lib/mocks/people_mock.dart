@@ -58,4 +58,5 @@ const List elements = [
   ['avatar5', 'Luciana Verdugo', 'Limpieza', 2, false],
   ['avatar6', 'Emmanuel Reyes', 'Director', 40, true],
   ['avatar7', 'Tamara Vidal', 'Arquitecta', 13, true],
+  ['avatar7', 'Tamara Vidal', 'Arquitecta', 13, true],
 ];

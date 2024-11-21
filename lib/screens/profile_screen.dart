@@ -57,7 +57,7 @@ class _BodyProfileState extends State<BodyProfile> {
           value: Preferences.darkmode,
           onChanged: (bool value) {
             setState(() {
-              Preferences.darkmode = value; // Actualiza la preferencia.
+              Preferences.darkmode = value; 
               value ? temaProvider.setDark() : temaProvider.setLight();
             });
           },
