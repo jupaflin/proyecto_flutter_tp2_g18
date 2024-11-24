@@ -5,7 +5,7 @@ import 'package:flutter_application_base/mocks/albums_mock.dart';
 
 Future<List<Album>> fetchAlbumsFromMock() async {
   // Simula un tiempo de carga si lo deseas
-  await Future.delayed(Duration(seconds: 1));
+  await Future.delayed(const Duration(seconds: 1));
 
   // Convierte cada entrada de la lista simulada en un objeto Album
   return mockAlbums.map((item) {

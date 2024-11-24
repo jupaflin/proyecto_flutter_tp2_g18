@@ -1,5 +1,4 @@
 // Cappa Matias widget
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
