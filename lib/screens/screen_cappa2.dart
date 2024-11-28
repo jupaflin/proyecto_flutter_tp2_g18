@@ -69,7 +69,7 @@ class AlbumSingleScreen extends StatelessWidget {
                     //color: const Color(0xff2d3e4f),
                     child: Center(
                       child: Text(
-                        args['descripcion'],
+                        args['release_date'],
                         style: const TextStyle(
                           fontSize: 18,
                           

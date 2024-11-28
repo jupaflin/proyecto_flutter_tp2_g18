@@ -64,9 +64,9 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
                 Navigator.pushNamed(context, 'album_item',
                     arguments: <String, dynamic>{
                       'titulo': mockAlbums[index][0],
-                      'descripcion': mockAlbums[index][1],
+                      'release_date': mockAlbums[index][1],
                       'imagen': mockAlbums[index][2],
-                      'nro': mockAlbums[index][3],
+                      'nro': mockAlbums[index][3],  //total de canciones del album
                     });
                 FocusManager.instance.primaryFocus?.unfocus();
               },
