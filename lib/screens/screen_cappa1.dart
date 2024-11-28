@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_base/helpers/album.dart';
-import 'package:flutter_application_base/helpers/album_future.dart';
 import 'package:flutter_application_base/mocks/albums_mock.dart';
 
 import '../widgets/create_card.dart';
@@ -64,9 +63,10 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
                 onTap: () {
                 Navigator.pushNamed(context, 'album_item',
                     arguments: <String, dynamic>{
-                      'avatar': mockAlbums[index][0],
-                      'name': mockAlbums[index][1],
-                      'cargo': mockAlbums[index][2],
+                      'titulo': mockAlbums[index][0],
+                      'descripcion': mockAlbums[index][1],
+                      'imagen': mockAlbums[index][2],
+                      'nro': mockAlbums[index][3],
                     });
                 FocusManager.instance.primaryFocus?.unfocus();
               },

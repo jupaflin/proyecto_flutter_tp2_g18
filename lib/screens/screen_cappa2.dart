@@ -20,15 +20,74 @@ class AlbumSingleScreen extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: size.height * 0.40,
+              height: size.height * 0.60,
               color: const Color(0xff2d3e4f),
+              child: Image.network(args['imagen']),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Container(
+              width: double.infinity,
+              height: size.height * 0.10,
               child: Center(
-                child: CircleAvatar(
-                radius: 100,
-                child: Image.network(args['cargo']),
+                child: Text(
+                  args['titulo'],
+                  style: const TextStyle(
+                    fontSize: 24,
+                    
+                  ),
                 ),
               ),
             ),
+            const SizedBox(
+              height: 15,
+            ),
+            Container(
+              width: double.infinity,
+              height: size.height * 0.10,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: size.width * 0.7,
+                    height: size.height * 1,
+                    //color:  Colors.red,
+                    child: Center(
+                      child: Text(
+                        'Cantidad de canciones: ${args['nro']}',//args['descripcion'],
+                        style: const TextStyle(
+                          fontSize: 24,
+                          
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: size.width * 0.3,
+                    height: size.height * 1,
+                    //color: const Color(0xff2d3e4f),
+                    child: Center(
+                      child: Text(
+                        args['descripcion'],
+                        style: const TextStyle(
+                          fontSize: 18,
+                          
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            TextFormField(
+            onChanged: (value) {},
+            style: const TextStyle(fontSize: 18),
+            initialValue: args['titulo'] ?? '',
+            )
           ],
         ),
       )
