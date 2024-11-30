@@ -39,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
   }) : super(key: key); */
 
 class BodyProfile extends StatefulWidget {
-  const BodyProfile({Key? key}) : super(key: key);
+  const BodyProfile({super.key});
 
   @override
   State<BodyProfile> createState() => _BodyProfileState();
@@ -73,9 +73,9 @@ class _BodyProfileState extends State<BodyProfile> {
 
 class HeaderProfile extends StatelessWidget {
   const HeaderProfile({
-   Key? key,
+   super.key,
     required this.size,
-  }) : super(key: key);
+  });
 
   final Size size;
 

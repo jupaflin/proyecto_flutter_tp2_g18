@@ -27,7 +27,7 @@ class AlbumSingleScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: size.height * 0.10,
               child: Center(
@@ -43,13 +43,13 @@ class AlbumSingleScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: size.height * 0.10,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  SizedBox(
                     width: size.width * 0.7,
                     height: size.height * 1,
                     //color:  Colors.red,
@@ -63,7 +63,7 @@ class AlbumSingleScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: size.width * 0.3,
                     height: size.height * 1,
                     //color: const Color(0xff2d3e4f),

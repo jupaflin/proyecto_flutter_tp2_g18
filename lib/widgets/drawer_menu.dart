@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class DrawerMenu extends StatelessWidget {
   final List<Map<String, String>> _menuItems = <Map<String, String>>[
     {'route': 'home', 'title': 'Home', 'subtitle': 'Home + counter app'},
-    {'route': 'custom_list', 'title': 'Custom list', 'subtitle': ''},
     {'route': 'profile', 'title': 'Perfil usuario', 'subtitle': ''},
-    {'route': 'albums', 'title': '(Cappa) Albunes', 'subtitle': ''}
+    {'route': 'albums', 'title': '(Cappa) Albunes', 'subtitle': ''},
+    {'route': 'newreleases', 'title': '(Batista) New Releases', 'subtitle': ''},
   ];
 
   DrawerMenu({super.key});
@@ -47,9 +47,7 @@ class DrawerMenu extends StatelessWidget {
 }
 
 class _DrawerHeaderAlternative extends StatelessWidget {
-  const _DrawerHeaderAlternative({
-    super.key,
-  });
+  const _DrawerHeaderAlternative();
 
   @override
   Widget build(BuildContext context) {
