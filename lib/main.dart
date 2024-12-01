@@ -37,6 +37,8 @@ class MyApp extends StatelessWidget {
           'album_item': (context) => const AlbumSingleScreen(),
           'newreleases': (context) => const newreleasesScreen(),
           'newrelease_item': (context) => const newreleaseSingleScreen(),
+          'genres': (context) => const GenresScreen(),
+          'genre_item': (context) => const GenreSingleScreen(),
         }
         /* home: DesignScreen(), */
         );
