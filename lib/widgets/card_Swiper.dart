@@ -12,8 +12,8 @@ class CardSwiper extends StatelessWidget {
       child: PageView.builder(
         controller:
             PageController(viewportFraction: 0.8), // Espaciado entre tarjetas
-        itemCount: items.length, // Usamos 'items' en lugar de 'item'
-        physics: BouncingScrollPhysics(),
+        itemCount: items.length, // Usamos 'items'
+        physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           final item = items[index]; // Accedemos a cada elemento de la lista
           return GestureDetector(

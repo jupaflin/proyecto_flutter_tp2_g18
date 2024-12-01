@@ -24,7 +24,7 @@ class newreleasesScreenState extends State<newreleasesScreen> {
       child: Scaffold(
         appBar: AppBar(title: const Text("New Releases")),
         body: Center(
-          child: CardSwiper(items: _release), // Solo mostramos el CardSwiper
+          child: CardSwiper(items: _release),
         ),
       ),
     );

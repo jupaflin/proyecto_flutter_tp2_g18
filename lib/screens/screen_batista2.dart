@@ -11,7 +11,6 @@ class newreleaseSingleScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(arguments['title'])),
       body: Center(
-        // Centra todo horizontal y verticalmente
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, // Centra verticalmente
           crossAxisAlignment:
